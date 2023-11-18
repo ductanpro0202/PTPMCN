@@ -1,0 +1,305 @@
+:root {
+    --primary-color: pink; /* Định nghĩa biến --primary-color với giá trị blue */
+  }
+
+
+body{
+    margin: 0;
+    padding: 0;
+}
+.wrapper{
+    border: 1px solid #000;
+    height: auto;
+    width: 100%;
+    margin: 0;
+}
+/* css dành cho header*/
+.header{
+    border: 1px solid pink;
+    height: 100px;
+    width: 100%;
+    background: white;
+    display: flex;
+    justify-content: space-between; /* Căn các phần tử ở hai đầu */
+    align-items: center; /* Căn giữa theo chiều dọc */
+    position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  
+  z-index: 999; }
+.header img{
+    height: 100px;
+    width: 100px;
+    margin-left: 30px;
+    
+}
+
+  .cart-button {
+    padding: 8px;
+    border: 2px solid transparent; /* Đặt khung xung quanh với độ rộng và màu trong suốt ban đầu */
+    transition: border-color 0.3s ease; /* Tạo hiệu ứng chuyển đổi mượt mà */
+  }
+  
+  .cart-button:hover {
+    border-color: red; /* Màu đỏ khi hover vào */
+  }
+  
+  .btn{
+    justify-content: center;
+    align-items: center;
+    border: solid 1 px black;
+    color: #ff0000;
+    padding: 8px 16px;
+    margin-right: 20px;
+    cursor: pointer;
+}
+ 
+.cart-button{
+    margin-right: 60px;
+
+}
+
+.fa-shopping-cart {
+    color: var(--primary-color);
+  }
+
+
+  /*Css cho thanh menu*/
+
+.menu {
+    border: 1px solid pink;
+    height: 50px;
+    width: 100%;
+    background: pink;
+    margin-top: 100px;
+    position: fixed;
+    left: 0;
+    right: 0;
+    
+}
+
+.list_menu {
+    list-style: none;
+    padding: 0;
+    display: flex; 
+}
+
+.list_menu li {
+    margin: 0 10px; 
+    position: relative;
+}
+
+.list_menu li a {
+    color: #fff; 
+    text-decoration: none;
+}
+
+.list_menu li a:hover {
+    color: #ff0000; 
+    
+}
+
+
+/*css cho phần main(sản phẩm)*/
+#main{
+    border: 1px solid #000;
+    height: auto;
+    width: 100%;
+    display: flex;
+    margin-top: 100px;
+}
+
+
+/* css cho phần maincontent*/
+.maincontent {
+    border: 1px solid #000;
+    flex: 1; /* Main content sẽ mở rộng để điền vào phần còn lại của container */
+    background-color: #f0f0f0;
+    height: auto;
+    
+}
+ul.product_list {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    font-size: 0; /* Remove white space between inline-block elements */
+}
+
+ul.product_list li {
+    border: 1px solid black;
+    width: 19%;
+    list-style: none;
+    margin: 5px;
+    display: inline-block; /* Use display: inline-block instead of float */
+    font-size: 16px; /* Reset font size to its original value for the content */
+    vertical-align: top; /* Align items to the top of the container */
+   height: 300px;
+}
+
+ul.product_list li img {
+    width: 100%;
+    height: 200px;
+}
+
+p.price_product{
+    text-align: center;
+    color: green;
+    font-size: 16px;
+    font-weight: bold;
+}
+p.title_product{
+    text-align: center;
+    color: red;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/*Css cho footer trang user*/
+.footer{
+   
+    border: 1px solid pink;
+    height: 200px;
+    width: 100%;
+    background-color: pink;
+    color: #fff;
+    padding: 5px 0;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.footer-logo img {
+    max-width: 150px;
+    height: 50px;
+}
+
+.footer-social a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 24px;
+    margin-right: 10px;
+    transition: color 0.3s;
+}
+
+.footer-social a:hover {
+    color: red;
+}
+
+.footer-text {
+    max-width: 400px;
+    margin-top: 10px;
+}
+
+.fa {
+    font-size: 26px;
+}
+
+/* CSS bổ sung */
+input:invalid {
+    border: 1px solid red;
+    background-color: #fce4ec; /* Màu hồng nhạt */
+    color: #000; /* Màu chữ đen */
+}
+
+input:valid {
+    border: 1px solid #ccc; /* Trở lại đường viền mặc định khi trường hợp lệ */
+}
+
+
+/*Css cho phần chi tiết sản phẩm*/
+/* Reset CSS */
+
+
+/* Phần wrapper chứa nội dung chi tiết sản phẩm */
+.wrapper_chitiet {
+    width: 80%;
+    margin: 20px auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+/* Phần hình ảnh sản phẩm */
+.hinhanh_sanpham {
+    flex: 0 0 45%;
+}
+
+.hinhanh_sanpham img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Phần chi tiết sản phẩm */
+.chitiet_sanpham {
+    flex: 0 0 45%;
+    padding: 0 20px;
+}
+
+.chitiet_sanpham h3 {
+    margin-top: 0;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.chitiet_sanpham p {
+    margin-bottom: 8px;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+/* Nút thêm vào giỏ hàng */
+.themgiohang {
+    padding: 10px 20px;
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.themgiohang:hover {
+    background-color: #2980b9;
+}
+
+
+
+.search_btn{
+    border: 1px solid black;
+    color: red;
+    height: 50px;
+}
+
+.search_wrapper {
+    width: 50%; /* Độ rộng của thanh tìm kiếm */
+    margin: 0 auto; /* Canh giữa thanh tìm kiếm */
+}
+
+.search_wrapper input[type="text"],
+.search_wrapper button {
+    padding: 10px;
+    border: none;
+    transition: border 0.3s; /* Hiệu ứng chuyển đổi border */
+}
+
+.search_wrapper input[type="text"]:focus {
+    outline: none; /* Loại bỏ viền focus mặc định */
+}
+
+/* Hiệu ứng hover */
+.search_wrapper input[type="text"]:hover,
+.search_wrapper button:hover {
+    border: 5px solid #ccc; /* Border khi hover */
+}
